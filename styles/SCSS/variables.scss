@@ -1,0 +1,79 @@
+$font-family-primary: "Jost", sans-serif; //основной текст
+$font-size-primary-norm: 16px;
+$font-size-primary-large: 24px;
+$font-size-primary-small: 12px;
+$font-weight-primary-norm: 400;
+$font-weight-primary-bold: 700;
+$line-height: 1.5;
+$font-family-main-heading: "Along Sans"; //главный заголовок
+$font-family-small-headings: "Along Sans thin"; //заголовки
+$primary-color-green: #0db89f;
+$primary-color-pink: #d60192;
+$second-color-light-green: #0debcd;
+$second-color-light-pink: #d60192;
+$third-color-dark-green: #235b50;
+$third-color-dark-pink: #84024e;
+$main-color-black: #000;
+$main-color-white: #fff;
+
+@font-face {
+  font-family: "Along Sans";
+  src: url(/styles/fonts/AlongSanss2-Regular.otf);
+}
+@font-face {
+  font-family: "Along Sans thin";
+  src: url(/styles/fonts/AlongSanss2-ExtraLight.otf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+// Основные стили и стили заголовков
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: $font-family-primary;
+  font-weight: $font-weight-primary-norm;
+  font-size: $font-size-primary-small;
+}
+
+h1 {
+  font-family: $font-family-main-heading;
+  font-weight: $font-weight-primary-bold;
+  font-size: $font-size-primary-large;
+}
+h2 {
+  font-family: $font-family-small-headings;
+  font-weight: $font-weight-primary-bold;
+  font-size: $font-size-primary-norm;
+}
+body,
+h1,
+h2 {
+  line-height: $line-height;
+  color: $main-color-black;
+}
+
+// Стили стандартных блоков секций от Алены
+.section-wrapper {
+  padding: 72px 56px;
+}
+
+.section-title {
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  //   flex-wrap: wrap;
+}
