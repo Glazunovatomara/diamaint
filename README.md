@@ -1,1 +1,1 @@
-1. sass --watch styles/scss/index.scss styles/css/index.css - Команда компиляции
+1. sass --watch styles/sass/index.scss styles/css/style.css - Команда компиляции
