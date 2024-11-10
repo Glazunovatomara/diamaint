@@ -1,2 +1,117 @@
 // команда для быстрой вставки в терминал - запускает компиляцию кода SASS в CSS, терминал должен оставаться открытым
-// "  sass --watch styles/sass/index.scss styles/css/style.css  "
+// "  sass --watch styles/sass/index.scss styles/CSS/style.css  "
+
+.header__logo {
+  padding: 0 40px 0 20px;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__menu-basket {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: 30px;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../../../assets/img/header_block_1/Ellipse.svg");
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $background;
+  padding: 20px;
+}
+
+.header__menu-burger {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  width: 30px;
+  height: 3px;
+  background-color: $primary-color;
+  margin: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.header__menu-list {
+  display: flex;
+  list-style: none;
+}
+
+.header__menu-list li {
+  margin: 0 10px;
+  @media (max-width: 950px) {
+    margin: 0 0 0 0;
+  }
+}
+
+.header__menu-list a {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 158%;
+  color: $primary-color;
+  text-decoration: none;
+  padding: 20px;
+  transition: color 0.3s ease-in-out;
+}
+.header__menu-list a:hover {
+  border-radius: 10px;
+  background: rgba(81, 80, 118, 0.1);
+}
+
+.header__menu-big {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 20px 0 20px;
+}
+
+@media (max-width: 870px) {
+  .header__menu-burger {
+    display: block;
+  }
+  .header__menu-big {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .header__menu-list {
+    position: absolute;
+    top: 0;
+    left: 70px;
+    width: 200px;
+    background-color: $background;
+    flex-direction: column;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header__menu-list.active {
+    transform: translateY(0);
+  }
+
+  .header__menu-list li {
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid $primary-color;
+  }
+  .header__menu-list a:hover {
+    border-radius: 10px;
+    padding: 10px;
+    background: rgba(81, 80, 118, 0.1);
+  }
+}
