@@ -1,0 +1,142 @@
+// команда для быстрой вставки в терминал - запускает компиляцию кода SASS в CSS, терминал должен оставаться открытым
+// "  sass --watch styles/sass/index.scss styles/CSS/style.css  "
+
+.main__content-title {
+  font-family: $third-family;
+  font-weight: 400;
+  font-size: 230px;
+  line-height: 92%;
+  color: $primary-color;
+  margin-left: 150px;
+}
+
+.main__content-prg {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 133%;
+  color: #63678c;
+  margin-bottom: 650px;
+}
+
+.main__content-img {
+  width: 976px;
+  height: 648px;
+  background: url("../../../assets/img/header_block_1/_globulus_.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 800px;
+}
+
+.main__content-bl {
+  width: 300px;
+}
+
+.main__content-text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 170%;
+  color: $text-color;
+
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+.main__content-text1 {
+  font-family: $font-family;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 170%;
+  color: #828282;
+  margin-bottom: 70px;
+  width: 350px;
+}
+
+.main__content-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main__content-btn {
+  width: 270px;
+  height: 70px;
+
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  opacity: 0.9;
+  border-radius: 100px;
+  width: 270px;
+  height: 70px;
+  background: $primary-color;
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+.main__content-img2 {
+  width: 1455px;
+  height: 1113px;
+  background: url("../../../assets/img/header_block_1/Dandelion.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  // меньше top не делать, перекрываем меню header и кнопки не нажать
+  top: 90px;
+  left: 400px;
+  opacity: 0.5;
+
+  // border: solid, 3px, red;
+}
+
+.main__content-text3 {
+  font-family: $second-family;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 180%;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  text-align: right;
+  color: $text-color;
+  width: 200px;
+}
+
+.main__content-text3s {
+  font-family: $second-family;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 180%;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #888794;
+}
+
+.main__content-text3b {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 500px;
+  margin-bottom: 150px;
+}
+
+.main__content-text4 {
+  font-family: $font-family;
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 109%;
+  color: $title-color;
+}
+
+.main__content-block {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 600px;
+  padding: 0 60px 0 60px;
+}
