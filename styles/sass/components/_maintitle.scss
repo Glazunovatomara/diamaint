@@ -62,9 +62,6 @@
 }
 
 .main__content-btn {
-  width: 270px;
-  height: 70px;
-
   font-family: $font-family;
   font-weight: 600;
   font-size: 13px;
@@ -78,8 +75,12 @@
   height: 70px;
   background: $primary-color;
   margin-left: 70px;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 80px;
+}
+
+.main__content-btn:active {
+  background: $card-title;
 }
 
 .main__content-img2 {
@@ -92,8 +93,6 @@
   top: 90px;
   left: 400px;
   opacity: 0.5;
-
-  // border: solid, 3px, red;
 }
 
 .main__content-text3 {
@@ -139,4 +138,64 @@
   display: inline-block;
   max-width: 600px;
   padding: 0 60px 0 60px;
+}
+
+@media screen and (max-width: 870px) {
+  .main__content-title {
+    font-size: 130px;
+    margin-left: 50px;
+  }
+
+  .main__content-prg {
+    font-size: 26px;
+    margin-bottom: 150px;
+  }
+
+  .main__content-img {
+    width: 776px;
+    height: 448px;
+    left: 0;
+    top: 420px;
+  }
+
+  .main__content-text {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .main__content-text1 {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  .main__content-btn {
+    font-weight: 600;
+    font-size: 11px;
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+
+  .main__content-img2 {
+    display: none;
+  }
+
+  .main__content-text3 {
+    font-size: 10px;
+  }
+
+  .main__content-text3s {
+    font-size: 26px;
+  }
+
+  .main__content-text3b {
+    display: none;
+  }
+
+  .main__content-text4 {
+    font-size: 26px;
+    margin-top: 100px;
+    margin-bottom: 150px;
+  }
 }
