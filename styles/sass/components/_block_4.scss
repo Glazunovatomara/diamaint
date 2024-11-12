@@ -1,0 +1,144 @@
+.publication {
+  height: 1191px;
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-family: $third-family;
+    font-weight: 400;
+    font-size: 330px;
+    line-height: 92%;
+    color: #d6d4e7;
+    margin-left: 247px;
+  }
+
+  &__container {
+    height: 980px;
+    background-color: $background;
+    margin-top: -95px;
+    display: flex;
+    position: relative;
+  }
+
+  &__img {
+    width: 1187px;
+    height: 895px;
+    margin: 129px 9px 66px 71px;
+  }
+
+  &__text {
+    width: 600px;
+    height: 542px;
+    margin: 237px 191px 201px 1136px;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__text_title {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: $card-title;
+    margin-bottom: 38px;
+  }
+
+  &__text_subtitle {
+    font-family: $font-family;
+    font-weight: 200;
+    font-size: 70px;
+    line-height: 109%;
+    color: $primary-color;
+  }
+
+  &__text_span {
+    font-weight: 300;
+    font-size: 120px;
+  }
+
+  &__text_description {
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 200%;
+    color: $text-color;
+    margin: 38px 142px 0 0;
+  }
+
+  &__text_img {
+    margin: 73px 0 -245px 9px;
+  }
+}
+
+//*tablet*//
+@media screen and (max-width: $tablet) {
+  .publication {
+    width: $tablet;
+
+    &__title {
+      font-size: 130px;
+      text-align: center;
+      margin-left: 0;
+    }
+
+    &__container {
+      //height: 980px;
+      background-color: $background;
+      margin-top: -37px;
+      display: flex;
+      position: relative;
+    }
+
+    &__img {
+      display: none;
+    }
+
+    &__text {
+      width: 600px;
+      height: 542px;
+      margin: 73px 0 0 136px;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &__text_title {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 180%;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: $card-title;
+      margin-bottom: 38px;
+    }
+
+    &__text_subtitle {
+      font-family: $font-family;
+      font-weight: 200;
+      font-size: 70px;
+      line-height: 109%;
+      color: $primary-color;
+    }
+
+    &__text_span {
+      font-weight: 300;
+      font-size: 120px;
+    }
+
+    &__text_description {
+      font-family: $font-family;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 200%;
+      color: $text-color;
+      margin: 38px 142px 0 0;
+    }
+
+    &__text_img {
+      margin: -8px 0 0 266px;
+      height: 902px;
+    }
+  }
+}
