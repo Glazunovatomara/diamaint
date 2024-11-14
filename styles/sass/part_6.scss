@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+/* Основной контейнер */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Заголовок */
+.header {
+    font-size: 36px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Секция с автором */
+.author-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.author-info {
+    text-align: left;
+    max-width: 60%;
+}
+
+.author-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.author-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.author-quote {
+    font-size: 18px;
+    font-style: italic;
+    color: #333;
+}
+
+.author-photo {
+    max-width: 35%;
+    text-align: right;
+}
+
+.author-photo img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Маленькие изображения под цитатой */
+.author-images {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.author-images img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
