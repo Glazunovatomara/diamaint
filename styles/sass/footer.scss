@@ -1,0 +1,56 @@
+.contacts {
+    position: relative;
+    background-image: url('../assets/img/footer_block_6/vincent-guth-NUiQpGnj9rI-unsplash.png'); /* Укажите ваш путь к изображению */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    
+    align-items: center;
+    padding-left: 15vw;
+
+}
+
+.contacts-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.contacts-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-box {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-size: 70px;
+    font-weight: 100;
+    color: #4a5d9e;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
