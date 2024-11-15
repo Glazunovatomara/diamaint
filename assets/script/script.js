@@ -57,3 +57,117 @@ const swiper = new Swiper('.swiper', {
       prevEl: '.swiper-button-prev',
     },
   });
+
+  //BLOCK4
+const modal = document.getElementById("publicationMyModal");
+const hoverTextBlock = document.getElementById("hoverTextBlock");
+const modalBodyContent = modal.querySelector(".publication__modal_body");
+const span = modal.getElementsByClassName("publication__close")[0];
+
+let myModalOpen = false;
+
+// Открываем модальное окно при наведении на блок
+hoverTextBlock.addEventListener("mouseover", () => {
+  if (!myModalOpen) {
+    modal.style.display = "block";
+    modalBodyContent.innerHTML = hoverTextBlock.innerHTML;
+
+    myModalOpen = true;
+  }
+});
+
+// Закрываем модальное окно
+span.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+// Закрываем модальное окно
+window.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+//BLOCK_5
+const cardContainers = [
+  document.querySelector(".articles__container .articles__container_card_1 "),
+  document.querySelector(".articles__container .articles__container_card_2"),
+  document.querySelector(".articles__container .articles__container_card_3"),
+  document.querySelector(".articles__container .articles__container_card_4"),
+];
+
+const articles = [
+  {
+    subtitle: "Совет",
+    title: "Как выбрать крем",
+    description:
+      "7 критериев правильного выбора. Под воздействием окружающей среды кожа теряет питательные вещества...",
+    link: "https://kora.ru/articles/kak-vybrat-krem-dlya-litsa/",
+  },
+  {
+    subtitle: "Совет",
+    title: "Что добавить к зимнему уходу",
+    description:
+      "Зимой кожа лица особенно остро нуждается в уходе. Холод и ветер, сухость воздуха отапливаемых помещений...",
+    link: "https://lecreme.ru/selections/ukhod-za-kozhey-litsa-zimoy-pravila/",
+  },
+  {
+    subtitle: "Совет",
+    title: "Как узнать свой тип кожи",
+    description:
+      "У одних кожа от природы жирная, у других сухая и тонкая, считается, что в современных условиях...",
+    link: "https://christinacosmetics.ru/guide-to-christina/product-reviews/kak-samostoyatelno-opredelit-svoy-tip-kozhi/",
+  },
+  {
+    subtitle: "Совет",
+    title: "Как правильно наносить крем",
+    description:
+      "Любой тип кожи нельзя сильно натирать при очищении или тонизировании, все движения...",
+    link: "https://hb-shop.by/blog/kak-pravilno-nanosit-krem-na-lico-i-vokrug-glaz.html",
+  },
+];
+
+articles.forEach((article, index) => {
+  const cardContainer = cardContainers[index];
+
+  //Создаем подзаголовок
+  const subtitle = document.createElement("h3");
+  subtitle.classList.add("articles__card_h3");
+  subtitle.textContent = article.subtitle;
+
+  // Создаем заголовок
+  const title = document.createElement("h2");
+  title.classList.add("articles__card_h2");
+  title.textContent = article.title;
+
+  // Создаем описание
+  const description = document.createElement("p");
+  description.classList.add("articles__card_p");
+  description.textContent = article.description;
+
+  //Создаем новый контейнер
+  const newCardContainer = document.createElement("div");
+  newCardContainer.classList.add("articles__card_container");
+
+  const spanLink = document.createElement("span");
+  spanLink.classList.add("articles__card_span");
+  newCardContainer.appendChild(spanLink);
+
+  const newCardP = document.createElement("p");
+  newCardP.classList.add("articles__card_link");
+  newCardContainer.appendChild(newCardP);
+
+  // Создаем ссылку
+  const link = document.createElement("a");
+  link.textContent = "Читать";
+  link.href = article.link;
+  link.target = "_blank";
+  newCardP.appendChild(link);
+
+  //Добавляем элементы в карточку
+  cardContainer.appendChild(subtitle);
+  cardContainer.appendChild(title);
+  cardContainer.appendChild(description);
+  cardContainer.appendChild(newCardContainer);
+  newCardContainer.appendChild(newCardP);
+});

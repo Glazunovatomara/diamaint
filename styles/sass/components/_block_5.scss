@@ -71,8 +71,12 @@
     line-height: 200%;
     letter-spacing: 0.23em;
     text-transform: uppercase;
-    color: $primary-color;
     cursor: pointer;
+  }
+
+  &__card_link a {
+    text-decoration: none;
+    color: $primary-color;
   }
 
   &__container_card_1 {
@@ -91,7 +95,11 @@
     margin: -732px 30px 23px 1133px;
   }
 
-  &__container_mobile {
+  &__tablet_slider {
+    display: none;
+  }
+
+  &__mobile {
     display: none;
   }
 }
@@ -99,5 +107,33 @@
 @media screen and (max-width: $tablet) {
   .articles {
     display: none;
+
+    &__mobile {
+      display: none;
+    }
+
+    &__tablet_slider {
+      display: block;
+      position: relative;
+    }
+
+    &__title {
+      font-size: 40px;
+      margin-bottom: 0px;
+      margin-top: -386px;
+      position: relative;
+    }
+
+    &__container {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    &__container_card {
+      border-top: 5px solid $primary-color;
+      width: 300px;
+      height: 401px;
+      background-color: $background-card;
+    }
   }
 }
