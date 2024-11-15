@@ -1,0 +1,290 @@
+.section-promotions {
+    max-width: 1387px;
+    width: 100%;
+    margin: 0 auto;
+}
+.info-promotions__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 333px;
+    width: 100%;
+    gap: 100px;
+    margin-top: 24px;
+    position: absolute;
+
+    @media screen and (max-width: 1150px) {
+        max-width: 280px;
+        width: 90%;
+    }
+
+    @media screen and (max-width: 1030px) {
+        position: relative;
+    }
+
+}
+.info-promotions__text {
+    color: $text-color;
+    font-family: $font-family;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 36px;
+}
+.info-promotions__btns {
+    display: flex;
+    gap: 19px;
+}
+
+/**/
+.block-promotions {
+    position: relative;
+    display: flex;
+    max-width: 810px;
+    width: 100%;
+    padding: 58px 0px 72px 62px;
+    background-color: $background-card;
+    box-shadow: -40px 40px 0px 0px $primary-color;
+    justify-content: space-between;
+
+    @media screen and (max-width: 959px) {
+        margin-left: 30px;
+        padding: 38px 0px 52px 42px;
+        box-shadow: -30px 30px 0px 0px #515076;
+    }
+    @media screen and (max-width: 625px) {
+        padding: 25px 20px 20px 30px;
+        box-shadow: -25px 25px 0px 0px #515076;
+    }
+    @media screen and (max-width: 550px) {
+        flex-wrap: wrap;
+        padding-bottom: 0;
+    }
+}
+.block-promotions__type {
+    position: absolute;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 26px;
+    letter-spacing: 17%;
+    text-align: right;
+    transform: rotate(270deg);
+    left: -100px;
+    bottom: 70px;
+    text-transform: uppercase;
+}
+.block-promotions__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 34px;
+    max-width: 433px;
+    width: 100%;
+}
+.block-promotions__info-num {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 62px;
+    height: 62px;
+    background-color: #EDECF6;
+    color: $primary-color;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 50%;
+}
+.block-promotions__info-subtitle {
+    max-width: 337px;
+    width: 100%;
+    color: #4C5072;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 39px;
+
+    @media screen and (max-width: 650px) {
+        font-size: 20px;
+        line-height: 29px;
+    }
+}
+.block-promotions__info-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: $text-color;
+
+    @media screen and (max-width: 650px) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+.block-promotions__img {
+    max-width: 285px;
+    width: 100%;
+    object-fit: cover;
+
+    @media screen and (max-width: 889px) {
+        max-width: 280px;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+/**/
+.box-discounts__decor {
+    max-width: 878px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: -190px;
+    bottom: 70px;
+
+    @media screen and (max-width: 635px) {
+        left: -90px;
+
+    }
+}
+
+/**/
+.box-discounts {
+    position: relative;
+    margin-top: 231px;
+}
+
+.section-discounts{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1120px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 15px;
+    overflow-x: auto;
+}
+.section-discounts::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+.section-discounts__card {
+    max-width: 350px;
+    width: 100%;
+    background-color: $background-card;
+    color: $primary-color;
+    height: fit-content;
+}
+.card-discounts__discount {
+    display: flex;
+    background-color: #5150761A;
+    padding: 10px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 49px;
+    color: #515076;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+    
+    @media screen and (max-width: 768px) {
+        height: 50px;
+    }
+}
+.section-discounts__card:nth-last-of-type(2) > .card-discounts__discount {
+    height: 150px;
+    font-weight: 500;
+    background-color: #51507626;
+    margin-bottom: 57px;
+    @media screen and (max-width: 768px) {
+        height: 100px;
+        margin-bottom: 37px;
+    }
+}
+.section-discounts__card:last-of-type> .card-discounts__discount {
+    height: 200px;
+    font-weight: 600;
+    background-color: #51507633;
+    margin-bottom: 107px;
+    @media screen and (max-width: 768px) {
+        height: 120px;
+        margin-bottom: 67px;
+    }
+}
+.card-discounts__img {
+    @media  screen and (max-width:400px) {
+    max-width: 321px;
+    min-width: 300px;
+    width: 100%;
+    }
+}
+.card-discounts__info {
+    padding: 10px 44px 35px 40px;
+}
+.card-discounts__info-payment {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+}
+.card-discounts__info-text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.card-discounts:hover, 
+.product-card:hover {
+    background-color: #f1f1f9;
+}
+
+/**/
+.swiper {
+    overflow: hidden;
+}
+.swiper-wrapper {
+    display: inline-flex;
+}
+.swiper-slide {
+    padding-left: 40px;
+    padding-bottom: 40px;
+
+    @media screen and (max-width: 959px) {
+        padding-left: 0;
+    }
+}
+.slider-promotions-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 74px;
+    height: 74px;
+    border-radius: 50%;
+    border: 1px solid  $text-color;
+    cursor: pointer;
+
+    svg {
+        stroke:$text-color;
+    }
+}
+.slider-promotions-btn {
+    &.swiper-button-disabled {
+        border: 1px solid #cfcfd4;
+        svg {
+            stroke:#cfcfd4;
+        }
+    }
+}
+.swiper-button-next {
+    transform: rotate(180deg);
+}
+.info-promotions__slider {
+    padding-left: 400px;
+    @media screen and (max-width: 1150px) {
+        padding-left: 300px;
+    }
+    @media screen and (max-width: 1030px) {
+        padding-top: 40px;
+        padding-left: 0;
+    }
+}
