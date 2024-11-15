@@ -1,7 +1,12 @@
+.main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
 .section-promotions {
     max-width: 1387px;
     width: 100%;
     margin: 0 auto;
+    padding-bottom: 131px;
 }
 .info-promotions__left {
     display: flex;
@@ -44,6 +49,7 @@
     background-color: $background-card;
     box-shadow: -40px 40px 0px 0px $primary-color;
     justify-content: space-between;
+    font-family: $font-family;
 
     @media screen and (max-width: 959px) {
         margin-left: 30px;
@@ -65,11 +71,11 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 26px;
-    letter-spacing: 17%;
+    letter-spacing: 4px;
     text-align: right;
     transform: rotate(270deg);
-    left: -100px;
-    bottom: 70px;
+    left: -145px;
+    bottom: 120px;
     text-transform: uppercase;
 }
 .block-promotions__info {
@@ -168,6 +174,7 @@
     max-width: 350px;
     width: 100%;
     background-color: $background-card;
+    font-family: $font-family;
     color: $primary-color;
     height: fit-content;
 }
