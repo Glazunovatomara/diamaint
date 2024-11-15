@@ -46,3 +46,14 @@ document.addEventListener("DOMContentLoaded", function() {
   // Показываем первое изображение при загрузке
   showSlide(currentImageIndex);
 });
+
+// swiper slider block 2 
+const swiper = new Swiper('.swiper', {
+    spaceBetween:20,
+    slidesPerView: 1,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
