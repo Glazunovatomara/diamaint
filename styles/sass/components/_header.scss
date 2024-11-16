@@ -2,7 +2,7 @@
 // "  sass --watch styles/sass/index.scss styles/CSS/style.css  "
 
 .header__logo {
-  padding: 0 40px 0 20px;
+  padding: 0 70px 0 20px;
 }
 
 .header__menu {
@@ -41,7 +41,7 @@
 }
 
 .header__menu-list li {
-  margin: 0 10px;
+  margin: 0 20px;
   @media (max-width: 950px) {
     margin: 0 0 0 0;
   }
