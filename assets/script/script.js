@@ -9,6 +9,26 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+// переход к блоку из меню хэдера
+// при клике на меню переходим в соотв раздел
+const links = document.querySelectorAll(".header__menu-item > a");
+for (let i = 0; i < links.length; i++) {
+  // обработчик клика
+  links[i].onclick = function () {
+    document
+      .getElementById(links[i].getAttribute("data-link"))
+      .scrollIntoView({ behavior: "smooth" });
+  };
+}
+
+// кнопка "Выбрать продукт" переход к продуктам
+document.querySelector(".main__content-btn").onclick = function () {
+  // скролл к меню с продуктами
+  document
+    .getElementById("section-product")
+    .scrollIntoView({ behavior: "smooth" });
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   let currentImageIndex = 0;
 
