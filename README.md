@@ -9,7 +9,7 @@
 **Отзывчивий и адаптивный** одностраничный сайт созданный на основе общедоступного макета в Figma:
 [Figma_Diamaint](https://www.figma.com/design/wQq1Z2itdeloz06JL1sweY/diamaint?node-id=1-17&node-type=frame&t=WIG3azUTHgQR1YaB-0)
 
-Проект создан в рамках обуения ученицами школы #itgirlsschool.
+Проект создан в рамках обуения ученицами школы #itgirlschool.
 
 ## О проекте
 
