@@ -1,6 +1,9 @@
 .articles {
-  height: 1203px;
-  padding-bottom: 50px;
+  max-width: 960px;
+  height: 981px;
+  margin: 0 auto;
+  margin-top: 125px;
+  margin-bottom: 155px;
 
   &__title {
     font-family: $font-family;
@@ -9,21 +12,20 @@
     line-height: 109%;
     text-align: center;
     color: $title-color;
-    margin-top: 124px;
     margin-bottom: 79px;
   }
 
-  &__container_card_1,
-  &__container_card_2,
-  &__container_card_3,
-  &__container_card_4 {
+  &__container-card-1,
+  &__container-card-2,
+  &__container-card-3,
+  &__container-card-4 {
     border-top: 5px solid $primary-color;
     width: 300px;
     height: 401px;
     background-color: $background-card;
   }
 
-  &__card_h3 {
+  &__card-h3 {
     font-family: $font-family;
     font-weight: 500;
     font-size: 12px;
@@ -34,7 +36,7 @@
     padding: 35px 40px 4px 48px;
   }
 
-  &__card_h2 {
+  &__card-h2 {
     font-family: $font-family;
     font-weight: 400;
     font-size: 20px;
@@ -43,7 +45,7 @@
     padding: 0 40px 29px 48px;
   }
 
-  &__card_p {
+  &__card-p {
     font-family: $font-family;
     font-weight: 400;
     font-size: 14px;
@@ -52,15 +54,19 @@
     padding: 0 14px 82px 48px;
   }
 
-  &__card_container {
+  &__card-container {
     display: flex;
   }
 
-  &__container_card_4 > &__card_container {
-    margin-top: 27px;
+  //&__container-card-3 > &__card-container {
+  margin-top: 23px;
+  //}
+
+  &__container-card-4 > &__card-container {
+    margin-top: 23px;
   }
 
-  &__card_span {
+  &__card-span {
     display: inline-block;
     margin: 11px 7px 55px 14px;
     border: 1px solid $primary-color;
@@ -68,7 +74,7 @@
     height: 0px;
   }
 
-  &__card_link {
+  &__card-link {
     font-family: $font-family;
     font-weight: 500;
     font-size: 12px;
@@ -78,52 +84,77 @@
     cursor: pointer;
   }
 
-  &__card_link a {
+  &__card-link a {
     text-decoration: none;
     color: $primary-color;
   }
 
-  &__container_card_1 {
-    margin: 286px 30px 372px 487px;
+  &__container-card-1 {
+    margin: 286px 30px 372px 0;
   }
 
-  &__container_card_1 h2 {
+  &__container-card-1 h2 {
     padding-bottom: 57px;
   }
 
-  &__container_card_2 {
-    margin: -990px 30px 23px 810px;
+  &__container-card-2 {
+    margin: -990px 30px 23px 327px;
   }
 
-  &__container_card_3 {
-    margin: 25px 30px 23px 810px;
+  &__container-card-3 {
+    margin: 30px 30px 23px 327px;
   }
 
-  &__container_card_4 {
-    margin: -732px 30px 23px 1133px;
+  &__container-card-4 {
+    margin: -732px 30px 23px 656px;
   }
 }
 
-@media screen and (max-width: $tablet) {
+@media (950px <= width <= 1100px) {
   .articles {
-    width: $tablet;
-    height: inherit;
-
+    margin-top: 45px;
     &__title {
-      font-size: 40px;
-      margin-bottom: 50px;
-      margin-top: -386px;
-      position: relative;
+      font-size: 50px;
     }
 
-    &__container_card_1,
-    &__container_card_2,
-    &__container_card_3,
-    &__container_card_4 {
+    &__container-card-2 {
+      //margin: -990px 30px 23px 327px;
+      margin: -990px 30px 23px 324px;
+    }
+
+    &__container-card-3 {
+      //margin: 30px 30px 23px 327px;
+      margin: 30px 30px 23px 324px;
+    }
+
+    &__container-card-3 > &__card-container {
+      margin-top: -4px;
+    }
+
+    &__container-card-4 {
+      //margin: -732px 30px 23px 656px;
+      margin: -732px 30px 23px 649px;
+    }
+  }
+}
+
+@media (769px <= width <= 949px) {
+  .articles {
+    height: 500px;
+    margin-top: 51px;
+    &__title {
+      font-size: 40px;
+    }
+
+    &__container-card-1,
+    &__container-card-2,
+    &__container-card-3,
+    &__container-card-4 {
       margin: 0;
     }
 
     &__container {
+      height: 87%;
       margin: 26px;
       display: flex;
       flex-wrap: nowrap;
@@ -134,37 +165,103 @@
     &__container div {
       flex: 0 0 auto;
     }
+
+    &__container-card-3 > &__card-container {
+      margin-top: 0;
+    }
+
+    &__container-card-4 > &__card-container {
+      margin-top: 27px;
+    }
   }
 }
 
-@media screen and (max-width: $mobile) {
+@media screen and (424px <= width <= $tablet) {
   .articles {
-    width: $mobile;
+    height: 481px;
+    margin-top: 445px;
+    margin-bottom: 113px;
+    @media screen and (max-width: 424px) {
+      margin-top: 308px;
+      margin-bottom: 100px;
+    }
 
     &__title {
-      font-size: 36px;
-      margin-bottom: 41px;
-      margin-top: 0px;
+      font-size: 40px;
+      margin-bottom: 50px;
+      margin-top: -386px;
+      position: relative;
     }
 
-    &__container_card_1,
-    &__container_card_2,
-    &__container_card_3,
-    &__container_card_4 {
-      height: 350px;
-    }
-
-    &__card_h2 {
-      margin-bottom: -7px;
-    }
-
-    &__card_p {
-      margin-bottom: -52px;
+    &__container-card-1,
+    &__container-card-2,
+    &__container-card-3,
+    &__container-card-4 {
+      margin: 0;
     }
 
     &__container {
-      margin: 5px;
-      gap: 23px;
+      height: 85%;
+      margin: 26px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 33px;
+      overflow-x: auto;
+    }
+
+    &__container div {
+      flex: 0 0 auto;
+    }
+
+    &__container-card-3 > &__card-container {
+      margin-top: 0;
+    }
+
+    &__container-card-4 > &__card-container {
+      margin-top: 27px;
+    }
+  }
+}
+
+@media screen and (250px <= width <= 424px) {
+  .articles {
+    height: 481px;
+    margin-bottom: 113px;
+    margin-top: 308px;
+
+    &__title {
+      font-size: 40px;
+      margin-bottom: 50px;
+      margin-top: -386px;
+      position: relative;
+    }
+
+    &__container-card-1,
+    &__container-card-2,
+    &__container-card-3,
+    &__container-card-4 {
+      margin: 0;
+    }
+
+    &__container {
+      height: 85%;
+      margin: 26px;
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 33px;
+      overflow-x: auto;
+    }
+
+    &__container div {
+      flex: 0 0 auto;
+    }
+
+    &__container-card-3 > &__card-container {
+      margin-top: 0;
+    }
+
+    &__container-card-4 > &__card-container {
+      margin-top: 27px;
     }
   }
 }
