@@ -1,75 +1,111 @@
 .publication {
-  margin-top: 107px;
-  height: 1191px;
-
   &__title {
+    max-width: 100%;
     position: relative;
     z-index: 1;
     font-family: $third-family;
     font-weight: 400;
-    font-size: 330px;
+    font-size: 20.1em; // 330px;
     line-height: 92%;
     color: #d6d4e7;
-    margin-left: 247px;
+    margin-left: 12.8%; // 247px;
+
+    @media screen and (max-width: 1666px) {
+      margin-left: 0;
+      font-size: 19.1em;
+    }
+    @media screen and (max-width: 1500px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 1300px) {
+      font-size: 17.1em;
+    }
   }
 
   &__container {
-    height: 980px;
+    max-width: 100%; // 1920px;
     background-color: $background;
-    margin-top: -95px;
+    margin-top: -124px;
     display: flex;
-    position: relative;
+    @media screen and (max-width: 1220px) {
+      height: 43em;
+    }
+    @media screen and (max-width: 980px) {
+      margin-top: -191px;
+    }
   }
 
   &__img {
-    width: 1187px;
-    height: 895px;
-    margin: 129px 9px 66px 71px;
+    max-width: 50%; // 1066px;
+    max-height: 50%; // 821px;
+    margin-top: 10%; // 133px;
+    margin-left: 10%; // 169px;
+    @media screen and (max-width: 1220px) {
+      max-height: 66%;
+      margin-left: 6%;
+    }
+    @media screen and (max-width: 980px) {
+      margin-left: 0;
+    }
   }
 
   &__text {
-    width: 600px;
-    height: 542px;
-    margin: 237px 191px 201px 1136px;
+    max-width: 32.4%; // 623px;
+    margin-top: 12.8%; // 247px;
+    margin-left: 56.6%; // 1146px;
     position: absolute;
     z-index: 1;
   }
 
-  &__text_title {
+  &__text-title {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em; // 16px;
     line-height: 180%;
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: $card-title;
-    margin-bottom: 38px;
+    margin-bottom: 1.06em; // 17px;
   }
 
-  &__text_subtitle {
+  &__text-subtitle {
     font-family: $font-family;
     font-weight: 200;
-    font-size: 70px;
+    font-size: 4.3em; // 70px;
     line-height: 109%;
     color: $primary-color;
   }
 
-  &__text_span {
+  &__text-span {
     font-weight: 300;
-    font-size: 120px;
+    font-size: 120px; //
   }
 
-  &__text_description {
+  &__text-description {
     font-family: $font-family;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 1em; // 16px;
     line-height: 200%;
     color: $text-color;
-    margin: 38px 142px 0 0;
+    margin-top: 3.6em; // 58px;
+    margin-right: 10em; // 161px;
+    @media screen and (max-width: 1666px) {
+      margin-right: 1em;
+      margin-top: 3em;
+    }
+    @media screen and (max-width: 1500px) {
+      margin-right: 0;
+      margin-top: 2em;
+    }
   }
 
-  &__text_img {
-    margin: 73px 0 -245px 9px;
+  &__text-img {
+    max-width: 30.2%; // 638px;
+    max-height: 1196px;
+    margin-top: 3.7%; // 91px;
+    margin-left: 64.7%; // 1282px;
+    position: absolute;
   }
 
   &__modal {
@@ -84,7 +120,7 @@
     background-color: rgba(0, 0, 0, 0.4);
   }
 
-  &__modal_content {
+  &__modal-content {
     background-color: rgb(219 208 208);
     margin: 10% auto;
     padding: 20px;
@@ -107,39 +143,134 @@
     cursor: pointer;
   }
 
-  &__modal_body &__text_description {
+  &__modal-body &__text-description {
     margin: 1px;
     font-size: 23px;
   }
 
-  &__modal_body &__text_span {
+  &__modal-body &__text-span {
     font-size: 77px;
   }
 
-  &__modal_body &__text_subtitle {
+  &__modal-body &__text-subtitle {
     font-size: 46px;
   }
 
-  &__modal_body &__text_title {
+  &__modal-body &__text-title {
     font-size: 19px;
     margin-bottom: 15px;
   }
 }
 
-//*tablet*//
-@media screen and (max-width: $tablet) {
+@media (max-width: 1437px) {
   .publication {
-    margin-top: 0px;
-    width: $tablet;
+    &__text {
+      max-width: 32.4%; // 623px;
+      margin-top: 12.8%; // 247px;
+      margin-left: 56.6%; // 1146px;
+    }
 
+    &__text-title {
+      font-size: 0.7em; // 1em; // 16px;
+      margin-bottom: 0.9em; // 1.06em; // 17px;
+    }
+
+    &__text-subtitle {
+      font-size: 3.2em; // 4.3em; // 70px;
+    }
+
+    &__text-span {
+      font-size: 88px; // 120px; //
+    }
+
+    &__text-description {
+      font-size: 0.9em; // 1em; // 16px;
+
+      margin-top: 1.3em; // 3.6em; // 58px;
+      margin-right: 0; // 10em; // 161px;
+    }
+  }
+}
+
+@media (950px <= width <= 1130px) {
+  .publication {
     &__title {
-      font-size: 130px;
-      text-align: center;
-      margin-left: 0;
+      font-size: 14em;
     }
 
     &__container {
-      height: 653px;
+      height: 34em;
+      margin-top: -4em;
+    }
+
+    &__img {
+      margin-left: 3em;
+    }
+
+    &__text-title {
+      font-size: 0.6em;
+    }
+
+    &__text-subtitle {
+      font-size: 2.6em;
+    }
+
+    &__text-span {
+      font-size: 1em;
+    }
+
+    &__text-description {
+      font-size: 0.8em;
+    }
+  }
+}
+
+@media (769px <= width <= 949px) {
+  .publication {
+    &__title {
+      font-size: 11em;
+    }
+
+    &__container {
+      margin-top: -3em;
+      height: 25em;
+    }
+
+    &__img {
+      margin-left: 2em;
+      height: 72%;
+    }
+    &__text {
+      margin-left: 50%;
+    }
+    &__text-title {
+      font-size: 0.6em;
+    }
+
+    &__text-subtitle {
+      font-size: 1.9em;
+    }
+
+    &__text-span {
+      font-size: 1em;
+    }
+
+    &__text-description {
+      font-size: 0.6em;
+    }
+  }
+}
+
+/*tablet*/
+@media screen and (424px <= width <= $tablet) {
+  .publication {
+    &__title {
+      font-size: 6em; // 130px;
+      text-align: center;
+      margin-top: -58px;
+    }
+
+    &__container {
       margin-top: -37px;
     }
 
@@ -148,22 +279,34 @@
     }
 
     &__text {
-      margin: 73px 0 0 136px;
+      max-width: 54%;
+      margin: 73px 0 0 50px;
     }
 
-    &__text_span {
-      font-weight: 300;
-      font-size: 120px;
+    &__text-title {
+      width: 151%;
+      max-width: -53%;
+      font-size: 0.99em;
+      margin-bottom: 2em;
     }
 
-    &__text_img {
-      margin: 1px 0 0 315px;
-      height: 819px;
+    &__text-subtitle {
+      font-size: 3.5em;
+    }
+
+    &__text-span {
+      font-size: 1.7em;
+    }
+
+    &__text-img {
+      max-width: 58%;
+      margin: 1px 0 0 200px;
     }
   }
 }
 
-@media screen and (max-width: $mobile) {
+/*mobile*/
+@media screen and (max-width: 424px) {
   .publication {
     display: none;
   }
