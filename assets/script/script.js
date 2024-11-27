@@ -9,6 +9,26 @@ burger.addEventListener("click", () => {
   menu.classList.toggle("active");
 });
 
+// переход к блоку из меню хэдера
+// при клике на меню переходим в соотв раздел
+const links = document.querySelectorAll(".header__menu-item > a");
+for (let i = 0; i < links.length; i++) {
+  // обработчик клика
+  links[i].onclick = function () {
+    document
+      .getElementById(links[i].getAttribute("data-link"))
+      .scrollIntoView({ behavior: "smooth" });
+  };
+}
+
+// кнопка "Выбрать продукт" переход к продуктам
+document.querySelector(".main__content-btn").onclick = function () {
+  // скролл к меню с продуктами
+  document
+    .getElementById("section-product")
+    .scrollIntoView({ behavior: "smooth" });
+};
+
 document.addEventListener("DOMContentLoaded", function () {
   let currentImageIndex = 0;
 
@@ -63,12 +83,12 @@ const swiper = new Swiper(".swiper", {
 //BLOCK4
 const modal = document.getElementById("publicationMyModal");
 const hoverTextBlock = document.getElementById("hoverTextBlock");
-const modalBodyContent = modal.querySelector(".publication__modal_body");
+const modalBodyContent = modal.querySelector(".publication__modal-body");
 const span = modal.getElementsByClassName("publication__close")[0];
 
 let myModalOpen = false;
 
-// Открываем модальное окно при наведении на блок
+// Открываем модальное окно
 hoverTextBlock.addEventListener("mouseover", () => {
   if (!myModalOpen) {
     modal.style.display = "block";
@@ -92,10 +112,10 @@ window.addEventListener("click", (event) => {
 
 //BLOCK_5
 const cardContainers = [
-  document.querySelector(".articles__container .articles__container_card_1 "),
-  document.querySelector(".articles__container .articles__container_card_2"),
-  document.querySelector(".articles__container .articles__container_card_3"),
-  document.querySelector(".articles__container .articles__container_card_4"),
+  document.querySelector(".articles__container .articles__container-card-1 "),
+  document.querySelector(".articles__container .articles__container-card-2"),
+  document.querySelector(".articles__container .articles__container-card-3"),
+  document.querySelector(".articles__container .articles__container-card-4"),
 ];
 
 const articles = [
@@ -134,29 +154,29 @@ articles.forEach((article, index) => {
 
   //Создаем подзаголовок
   const subtitle = document.createElement("h3");
-  subtitle.classList.add("articles__card_h3");
+  subtitle.classList.add("articles__card-h3");
   subtitle.textContent = article.subtitle;
 
   // Создаем заголовок
   const title = document.createElement("h2");
-  title.classList.add("articles__card_h2");
+  title.classList.add("articles__card-h2");
   title.textContent = article.title;
 
   // Создаем описание
   const description = document.createElement("p");
-  description.classList.add("articles__card_p");
+  description.classList.add("articles__card-p");
   description.textContent = article.description;
 
   //Создаем новый контейнер
   const newCardContainer = document.createElement("div");
-  newCardContainer.classList.add("articles__card_container");
+  newCardContainer.classList.add("articles__card-container");
 
   const spanLink = document.createElement("span");
-  spanLink.classList.add("articles__card_span");
+  spanLink.classList.add("articles__card-span");
   newCardContainer.appendChild(spanLink);
 
   const newCardP = document.createElement("p");
-  newCardP.classList.add("articles__card_link");
+  newCardP.classList.add("articles__card-link");
   newCardContainer.appendChild(newCardP);
 
   // Создаем ссылку
