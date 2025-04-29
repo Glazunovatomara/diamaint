@@ -58,6 +58,7 @@
     background-color: $background-card;
     color: $primary-color;
     height: fit-content;
+    cursor: pointer;
 
     @media screen and (max-width: 768px) {
         max-width: 321px;

@@ -7,18 +7,18 @@
   background-repeat: no-repeat;
   min-height: 100vh;
   display: flex;
-
+  font-family: $font-family;
   align-items: center;
   padding-left: 15vw;
 }
 
 .contacts-overlay {
   position: absolute;
-  top: 0;
+  top: -10px;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  height: 30%;
+  background-image: linear-gradient(#FAFAFA, #fafafa00)
 }
 
 .contacts-content {
@@ -27,9 +27,9 @@
 }
 
 .contact-box {
-  background-color: white;
+  background-color: $background-card;
   padding: 40px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px #00000033;
   max-width: 400px;
   text-align: center;
 }
@@ -37,13 +37,13 @@
 .contact-box h2 {
   font-size: 70px;
   font-weight: 100;
-  color: #4a5d9e;
+  color: $primary-color;
   margin-bottom: 15px;
 }
 
 .contact-box p {
   font-size: 15px;
-  color: #666;
+  color: #828282;
   margin-bottom: 10px;
 }
 

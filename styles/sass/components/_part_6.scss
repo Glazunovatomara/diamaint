@@ -6,9 +6,11 @@
 }
 
 .title_unit_6 {
-    font-size: 48px; 
+    max-width: 500px;
+    font-family: $font-family;
+    font-size: 70px; 
     font-weight: 100; 
-    color: #4a5d9e; 
+    color: $title-color; 
     margin-bottom: 20px;
     line-height: 1.2;
     text-align: left;
@@ -20,6 +22,7 @@
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
+    font-family: $font-family;
 }
 
 .author-info {
@@ -29,22 +32,22 @@
 
 .author-name {
     font-size: 24px;
-    font-weight: bold;
-    color: #4a5d9e;
+    font-weight: 500;
+    color: $primary-color;
     margin-bottom: 10px;
 }
 
 .author-description {
     font-size: 16px;
     line-height: 1.6;
-    color: #4a5d9e;
+    color: $text-color;
     margin-bottom: 20px;
 }
 
 .author-quote {
     font-size: 18px;
     font-style: italic;
-    color: #4a5d9e;
+    color: $text-color;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -86,7 +89,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     color: white;
     border: none;
     padding: 10px;
